@@ -1,6 +1,6 @@
 # journal
 
-A thing to focus on the writing and not the reading. The anti-Roam, the anti-Obsidian.
+A thing to focus on the writing, not the reading. The anti-Obsidian, the anti-Roam.
 
 ## It looks like this
 
@@ -32,6 +32,10 @@ journal.localhost {
   reverse_proxy :9999
 }
 ```
+
+## Motivation
+
+My hypothesis is that Obsidian, Roam, and all of the "knowledge base" software popular these days see the reading vs. writing value breakdown as being something like 90:10%. I think it's the inverse. The main behaviors Obsidian/Roam/etc. encourage are making backlinks, tinkering with their settings, and trying to come up with a cogent directory structure. Accordingly, they're great for things like lists, or documents you need to frequently reference. They're bad for thinking or journaling, because the temptation to fritter around making backlinks and tweaking things that don't matter is too great due to what their designs incentivize.
 
 ## Implementation
 
