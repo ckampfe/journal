@@ -1,0 +1,4 @@
+/target
+*.db
+stdout.log
+error.log
