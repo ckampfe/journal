@@ -224,6 +224,16 @@ async fn main() -> anyhow::Result<()> {
         .execute(&mut *txn)
         .await?;
 
+    sqlx::query(
+        "create trigger if not exists entries_updated_at after update on entries
+        begin
+            update entries set updated_at = STRFTIME('%Y-%m-%d %H:%M:%f', 'NOW')
+            where id = old.id;
+        end;",
+    )
+    .execute(&mut *txn)
+    .await?;
+
     txn.commit().await?;
 
     let state = Arc::new(Mutex::new(AppState { pool }));
